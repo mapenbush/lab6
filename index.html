@@ -42,74 +42,7 @@
 			    basemap: "topo"
 			  });
 			});var map;
-		var graphicsArray = [];
 		
-		require([
-		  "esri/map",
-		
-		  //Geometry Modules
-		  "esri/geometry/Geometry",
-		  "esri/geometry/Point",
-		  "esri/geometry/Polyline",
-		  "esri/geometry/Polygon",
-		
-		  //Graphic & Style Modules
-		  "esri/graphic",
-		  "esri/symbols/SimpleMarkerSymbol",
-		  "esri/symbols/SimpleLineSymbol",
-		  "esri/symbols/SimpleFillSymbol",
-		  "esri/Color",
-		  "esri/InfoTemplate",
-		
-		  "dojo/domReady!",
-		  "esri/geometry"], 
-		
-		  function(
-		    Map,
-		
-		    //Geometry Hooks
-		    Geometry, 
-		    Point, 
-		    Polyline, 
-		    Polygon,
-		
-		    //Graphic & Style Hooks
-		    Graphic,
-		    SimpleMarkerSymbol,
-		    SimpleLineSymbol,
-		    SimpleFillSymbol,
-		    Color,
-		    InfoTemplate
-		
-		  ) {
-		  
-		  map = new Map("map", {
-		    center: [-85.2, 34.7],
-			zoom: 6,
-			basemap: "topo"
-		  });
-		
-		  function generateGraphicsArray(){
-		
-		    //Begin Point Graphic
-		
-		    //Initialize geographic point location
-		    var point = new Point(-86.61, 35.1107); 
-		
-		    //Initialize style that will be applied to point   
-		    var pointSymbol = new SimpleMarkerSymbol(); 
-		
-		    //Initialize attributes that will be applied to point 
-		    var pointAttributes = {city: "Albuquerque",  
-		                           state: "New Mexico"};
-		
-		    //Initialize pop-up template in which the point attributes will appear when clicked
-		    var pointInfoTemplate = new InfoTemplate("Albuquerque"); 
-		
-		  });
-		
-		  
-		});
 		</script>
 <a id="Alan Lomax's Southern Journey 1959-60" class="anchor" href="#Alan Lomax's Southern Journey 1959-60" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Alan Lomax's Southern Journey 1959-60</h3>
 
