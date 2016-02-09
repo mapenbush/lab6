@@ -1,20 +1,17 @@
 <html>
 <head>
-	<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
-	<script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
+	<link rel="stylesheet" href="https://js.arcgis.com/3.15/esri/css/esri.css">
+	<script src="https://js.arcgis.com/3.15/"></script>
 </head>
 <body>
 	This is my first Leaflet.js map!
 	<div id='map' style="height:400px; width:600px"; background-color: blue; border: 1px solid black;></div>
 	<script>
 		var map = L.map('map').setView([33.393714, -104.534766], 13);
-		L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+		L.tileLayer('http://www.arcgis.com/apps/MapTour/index.html?appid=b7ac2e37dac94998acc5001ccc321509', {
 			attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
 		}).addTo(map);
-		
-		L.marker([33.393714, -104.534766]).addTo(map)
-    			.bindPopup('Alien Sighting. <br> Call Fox Mulder.')
-    			.openPopup();
+
 	</script>
 </body>
 </html>
