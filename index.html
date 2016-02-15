@@ -33,16 +33,12 @@
       </header>
       <section>
         <h3>
-        	<div id='map' style="height:800px; width:1200px"; background-color: blue; border: 1px solid black;></div>
+        	<div id='map' style="height:400px; width:600px"; background-color: blue; border: 1px solid black;></div>
 		<script>
-			require(["esri/map", "dojo/domReady!"], function(Map) {
-			  var map = new Map("map", {
-			    center: [-85.2, 34.7],
-			    zoom: 6,
-			    basemap: "topo"
-			  });
-			  var point = new esri.geometry.Point(-85.2, 34.7);
-			});var map;
+		var map = L.map('map').setView([-85.2, 34.7], 6);
+		L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+			attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+		}).addTo(map);
 		
 		</script>
 <a id="Alan Lomax's Southern Journey 1959-60" class="anchor" href="#Alan Lomax's Southern Journey 1959-60" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Alan Lomax's Southern Journey 1959-60</h3>
@@ -58,3 +54,5 @@
 		
   </body>
 </html>
+
+		
