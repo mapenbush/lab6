@@ -9,8 +9,9 @@
     <link rel="stylesheet" href="stylesheets/github-light.css">
     <script src="javascripts/scale.fix.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
-    <script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <script src='https://api.mapbox.com/mapbox.js/v2.3.0/mapbox.js'></script>
+    <link href='https://api.mapbox.com/mapbox.js/v2.3.0/mapbox.css' rel='stylesheet' />
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
@@ -35,13 +36,10 @@
         <h3>
         	<div id='map' style="height:800px; width:1200px"; background-color: red; border: 1px solid black;></div>
 		<script>
-			var MapBox = L.tileLayer('http://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
-				attribution: 'Imagery from <a href="http://mapbox.com/about/maps/">MapBox</a> &mdash; Map data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
-				subdomains: 'abcd',
-				id: 'mquackenbush',
-				accessToken: 'pk.eyJ1IjoibXF1YWNrZW5idXNoIiwiYSI6ImNpa283M3JjMTB2c2V1Mm02aW9kNHIxemcifQ.Ld-4BioDUtIGO7TLSjRLoA'
-})			
-			var map = L.map('map').setView([34.975973, -85.095905], 6);
+			L.mapbox.accessToken = 'pk.eyJ1IjoibXF1YWNrZW5idXNoIiwiYSI6ImNpa283M3JjMTB2c2V1Mm02aW9kNHIxemcifQ.Ld-4BioDUtIGO7TLSjRLoA';
+			var map = L.mapbox.map('map', 'mapbox.streets')
+			    .setView([34.975973, -85.095905], 6);
+	
 		</script>
 <a id="Alan Lomax's Southern Journey 1959-60" class="anchor" href="#Alan Lomax's Southern Journey 1959-60" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Alan Lomax's Southern Journey 1959-60</h3>
 
