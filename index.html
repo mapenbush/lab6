@@ -137,7 +137,9 @@
 			            "coordinates": [-77.007481, 38.876516]
 			        }
 			    }]
-			};			
+			};	
+			var map = L.mapbox.map('map', 'mapbox.pencil')
+			    .setView([34.975973, -85.095905], 6);
 			map.on('style.load', function () {
 			    // Add marker data as a new GeoJSON source.
 			    map.addSource("markers", {
