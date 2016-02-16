@@ -31,26 +31,16 @@
       </header>
       <section>
         <h3>
-		<style>
-		    .mapboxgl-popup {
-		        max-width: 400px;
-		        font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
-		    }
-		
-		    .marker-title {
-		        font-weight: 700;
-		    }
 		</style>        	
         	<div id='map' style="height:800px; width:1200px"></div>
 		<script>
-			var map = L.mapbox.map('map', 'mapbox.pencil')
+			var map = L.map('map').setView([34.975973, -85.095905], 6);
 			L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
 			    attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
 			    maxZoom: 18,
 			    id: 'mquackenbush',
 			    accessToken: 'pk.eyJ1IjoibXF1YWNrZW5idXNoIiwiYSI6ImNpa283M3JjMTB2c2V1Mm02aW9kNHIxemcifQ.Ld-4BioDUtIGO7TLSjRLoA'
 			}).addTo(map);
-			    .setView([34.975973, -85.095905], 6);
 		</script>
 <a id="Alan Lomax's Southern Journey 1959-60" class="anchor" href="#Alan Lomax's Southern Journey 1959-60" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Alan Lomax's Southern Journey 1959-60</h3>
 
