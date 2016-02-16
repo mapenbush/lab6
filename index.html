@@ -205,6 +205,17 @@
 		      }
 		
 		];
+		var myLayer = L.geoJson(geojsonMD, {
+		     style: function (feature) {
+		         return feature.properties.style;
+		     },
+		     onEachFeature: function (feature, layer) {
+		         layer.bindPopup(feature.properties.name);
+		     }
+		 })
+		
+		myLayer.addData(polygon);
+		myLayer.addTo(map);
 		var CartoDB_Positron = L.tileLayer('http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png', {
 		     attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="http://cartodb.com/attributions">CartoDB</a>',
 		subdomains: 'abcd',
@@ -213,7 +224,6 @@
 		var map = L.map('map')
 			.addLayer(CartoDB_Positron)
 			.setView([34.975973, -85.095905], 6)
-			L.geoJson(geojson).addTo(map);
 		
 		</script>
 
