@@ -211,10 +211,10 @@
 		var mapboxTiles = L.tileLayer('https://api.mapbox.com/v4/mapbox.pencil/{z}/{x}/{y}.png?access_token=' + L.mapbox.accessToken, {
 		     attribution: '<a href="http://www.mapbox.com/about/maps/" target="_blank">Terms &amp; Feedback</a>'
 		});
-		var map = L.mapbox.map('map');
-		.addLayer(mapboxTiles);
-		.setView([34.975973, -85.095905], 6);
-		L.geoJson(geojson).addTo(map);
+		var map = L.mapbox.map('map')
+			.addLayer(mapboxTiles)
+			.setView([34.975973, -85.095905], 6)
+			L.geoJson(geojson).addTo(map);
 		</script>
 <a id="Alan Lomax's Southern Journey 1959-60" class="anchor" href="#Alan Lomax's Southern Journey 1959-60" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Alan Lomax's Southern Journey 1959-60</h3>
 
