@@ -67,7 +67,7 @@ h2 {
 }
 
 h3 {
-	font-size: 24px;
+	font-size: 16px;
 }
 
 h4, h5, h6 {
@@ -76,7 +76,7 @@ h4, h5, h6 {
 }
 
 a {
-  color:#C30000;
+  color:#232323;
   font-weight:200;
   text-decoration:none;
 }
@@ -216,7 +216,7 @@ td {
 
 header {
 	background-color: #171717;
-	color: #FDFDFB;
+	color: #232323;
   width:170px;
   float:left;
   position:fixed;
