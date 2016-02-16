@@ -214,7 +214,7 @@
 		var map = L.map('map')
 			.addLayer(CartoDB_Positron)
 			.setView([34.975973, -85.095905], 6)
-			geoJSON
+			L.geoJson(geojson).addTo(map);
 		
 		</script>
 
