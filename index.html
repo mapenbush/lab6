@@ -214,12 +214,11 @@
 		var map = L.map('map')
 			.addLayer(CartoDB_Positron)
 			.setView([34.975973, -85.095905], 6)
-			L.geoJson(geojson).addTo(map);
-		var labelLayer = L.geoJson(labels, {
-			pointToLayer: function (feature, latlng) {
-				return L.Marker(latlng, labelMarkerOptions).bindLabel(feature.properties.Name, {noHide:true});
-			},
-		});
+		var geoJson = L.geoJson(geojson, {
+			pointToLayer: L.mapbox.marker.style,
+    			style: function(feature) { return feature.properties; }
+		}).addTo(map);
+		
 		</script>
 
 <p><a id="Resources" class="anchor" href="#Resources" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Resources</h3></p>
