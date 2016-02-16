@@ -67,7 +67,7 @@ h2 {
 }
 
 h3 {
-	font-size: 16px;
+	font-size: 24px;
 }
 
 h4, h5, h6 {
@@ -76,7 +76,7 @@ h4, h5, h6 {
 }
 
 a {
-  color:#232323;
+  color:#C30000;
   font-weight:200;
   text-decoration:none;
 }
@@ -116,7 +116,7 @@ blockquote {
 }
 
 dl, dt, dd, dl p {
-	font-color: #232323;
+	font-color: #444;
 }
 
 dl dt {
@@ -216,7 +216,7 @@ td {
 
 header {
 	background-color: #171717;
-	color: #232323;
+	color: #FDFDFB;
   width:170px;
   float:left;
   position:fixed;
