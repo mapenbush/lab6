@@ -55,8 +55,7 @@ h1, h2, h3 {
 h1,h2, h3 {
 	display: block;
 	border-bottom: 1px solid #ccc;
-	padding-bottom: 5px
-	float: center;
+	padding-bottom: 5px;
 }
 
 h1 {
@@ -138,7 +137,8 @@ hr {
   border:0;
   background:#ccc;
   height:1px;
-  margin:0 0 24px;
+  margin:0 0 24px
+  float: center;
 }
 
 /* Images */
