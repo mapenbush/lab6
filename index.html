@@ -245,6 +245,15 @@
 		L.mapbox.map('map', 'mapbox.light')
 		  .setView([37.240103, -85.160288], 6)
 		  .featureLayer.setGeoJSON(geojson);
+		map.featureLayer.on('ready', function() {
+  			// Create a new line with no segments yet and add it to the map.
+		var polyline = L.polyline([]).addTo(map);
+		 // For each point in the map.featureLayer, grab its latitude and longitude
+		 // values and add them to the line.
+  		map.featureLayer.eachLayer(function(l) {
+    		  polyline.addLatLng(l.getLatLng());
+  		 });
+		});
 		
 		</script>
 	</h3>
