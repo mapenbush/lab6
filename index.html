@@ -245,6 +245,10 @@
 		L.mapbox.map('map', 'mapbox.light')
 		  .setView([37.240103, -85.160288], 6)
 		  .featureLayer.setGeoJSON(geojson);
+		map.featureLayer.on('click', function(e) {
+        	  var c = e.layer.getLatLng();
+        	  map.setView([c.lat, c.lng], 16);
+		});
 		
 	</h3>
 <p><a id="Resources" class="anchor" href="#Resources" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Resources</p>
