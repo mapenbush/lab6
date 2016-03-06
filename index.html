@@ -37,7 +37,6 @@
         <h3>
         	<div id='map'</div>
 		<script>
-		L.mapbox.accessToken = 'pk.eyJ1IjoibXF1YWNrZW5idXNoIiwiYSI6ImNpaDVvNnZzMzAxbWh0eGx4NHJob2NzZHgifQ.xXD8TNhco44xCbisjTgQSw';
 		function onEachFeature(feature, layer) {
 		        layer.bindPopup(feature.properties.name)
 		}
@@ -242,7 +241,7 @@
 		];
 		
 		L.mapbox.accessToken = 'pk.eyJ1IjoibXF1YWNrZW5idXNoIiwiYSI6ImNpaDVvNnZzMzAxbWh0eGx4NHJob2NzZHgifQ.xXD8TNhco44xCbisjTgQSw'
-		L.mapbox.map('map', 'mapbox://styles/mquackenbush/cilfl5sns00419pkvwct9g3vb')
+		L.mapbox.map('map', 'mapbox.streets')
 		  .setView([37.240103, -85.160288], 6)
 		  .featureLayer.setGeoJSON(geojson);
 		
