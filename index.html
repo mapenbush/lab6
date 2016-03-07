@@ -346,12 +346,17 @@
 
 		
 		];
-		
+		function onEachFeature(feature, layer) {
+		        layer.bindPopup("<h1>"+feature.properties.name+"</h1><p>"+feature.properties.caption+"</p>"+feature.properties.img);
+		}
+
+
 		L.mapbox.accessToken = 'pk.eyJ1IjoibXF1YWNrZW5idXNoIiwiYSI6ImNpaDVvNnZzMzAxbWh0eGx4NHJob2NzZHgifQ.xXD8TNhco44xCbisjTgQSw'
 		L.mapbox.map('map', 'mapbox.streets')
 		  .setView([37.240103, -85.160288], 6)
 		  .featureLayer.setGeoJSON(geojson);
-		
+		  
+		var geojsonlayer = L.geoJson(geo, {onEachFeature: onEachFeature}).addTo(map);
 		</script>	
 	</h3>
 	<h4>
