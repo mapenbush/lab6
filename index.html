@@ -344,7 +344,7 @@
 		
 		];
 		function onEachFeature(feature, layer) {
-		        layer.bindPopup("<h1>"+"Recorded in:"+feature.properties.Name+"</h1>);
+		        layer.bindPopup("<h1>"+feature.properties.Name+"</h1>);
 		}
 		
 		var map = L.map('map').setView([39.9816609, -75.1474139], 5);
