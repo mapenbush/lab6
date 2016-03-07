@@ -347,14 +347,13 @@
 		
 		];
 		function onEachFeature(feature, layer) {
-		        layer.bindPopup("<h1>"+feature.properties.name+"</h1><p>"+feature.properties.PopupInfo+"</p>"+feature.properties.img);
+		        layer.bindPopup("<h1>"+feature.properties.name+"</h1><p>"+feature.properties.PopupInfo+"</p>");
 		}
 
 
 		L.mapbox.accessToken = 'pk.eyJ1IjoibXF1YWNrZW5idXNoIiwiYSI6ImNpaDVvNnZzMzAxbWh0eGx4NHJob2NzZHgifQ.xXD8TNhco44xCbisjTgQSw'
 		L.mapbox.map('map', 'mapbox.streets')
-		  .setView([37.240103, -85.160288], 4)
-		  .featureLayer.setGeoJSON(geojson);
+		  .setView([37.240103, -85.160288], 4);
 		  
 		var geojsonlayer = L.geoJson(geojson, {onEachFeature: onEachFeature}).addTo(map);
 		</script>	
