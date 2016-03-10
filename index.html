@@ -251,7 +251,7 @@
 		var map = L.map('map', {
 		    center: [39.9816609, -75.1474139],
 		    zoom: 5,
-		    layers: [grayscale, cities]
+		    layers: [grayscale]
 		});
 		
 		var baseMaps = {
@@ -259,10 +259,7 @@
 		    "Streets": streets
 		};
 		
-		var overlayMaps = {
-		    "Cities": cities
-		};
-		
+	
 		L.control.layers(baseMaps, overlayMaps).addTo(map);
 		
 		var geojsonlayer = L.geoJson(geojson, {onEachFeature: onEachFeature}).addTo(map);
