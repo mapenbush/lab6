@@ -283,7 +283,12 @@
 		}),
 		    topographic   = L.tileLayer('http://server.arcgisonline.com/ArcGIS/rest/services/World_Physical_Map/MapServer/tile/{z}/{y}/{x}', {
 			attribution: 'Tiles &copy; Esri &mdash; Source: US National Park Service'
+		}), stamen = L.tileLayer('http://stamen-tiles-{s}.a.ssl.fastly.net/toner-background/{z}/{x}/{y}.{ext}', {
+			attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+			subdomains: 'abcd',
+			ext: 'png'
 		});
+		;
 		
 		var map = L.map('map', {
 		    center: [35.331086, -83.368441],
@@ -294,6 +299,7 @@
 		var baseMaps = {
 		    "Streets": streets,
 		    "Topographic": topographic
+		    "Stamen" : stamen
 		};
 		
 	
