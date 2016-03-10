@@ -244,13 +244,27 @@
 		        layer.bindPopup("<h1>"+feature.properties.name+"</h1>"+feature.properties.description);
 		}
 		
-		var map = L.map('map').setView([39.9816609, -75.1474139], 5);
 		
+		var grayscale = L.tileLayer(mapboxUrl, {id: 'MapID', attribution: mapboxAttribution}),
+		    streets   = L.tileLayer(mapboxUrl, {id: 'MapID', attribution: mapboxAttribution});
 		
-		L.tileLayer('http://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
-		maxZoom: 19,
-		attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>, Tiles courtesy of <a href="http://hot.openstreetmap.org/" target="_blank">Humanitarian OpenStreetMap Team</a>'
+		var map = L.map('map', {
+		    center: [39.9816609, -75.1474139],
+		    zoom: 5,
+		    layers: [grayscale, cities]
 		});
+		
+		var baseMaps = {
+		    "Grayscale": grayscale,
+		    "Streets": streets
+		};
+		
+		var overlayMaps = {
+		    "Cities": cities
+		};
+		
+		L.control.layers(baseMaps, overlayMaps).addTo(map);
+		
 		var geojsonlayer = L.geoJson(geojson, {onEachFeature: onEachFeature}).addTo(map);
 		
 		</script>	
