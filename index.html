@@ -38,6 +38,7 @@
         <h3>
         	<div id='map'</div>
 		<script>
+		<script type="text/javascript" src="pa_hospitals.geojson"></script>
 		<script type="text/javascript" src="pa_county.geojson"></script>
 		<script type="text/javascript">
 	
@@ -93,7 +94,10 @@ $.getJSON("pa_county.geojson",function(data){
 });
 
 	
-	
+	  $.getJSON("pa_hospitals.geojson",function(data){
+    // add GeoJSON layer to the map once the file is loaded
+    L.geoJson(data).addTo(map);
+  });
 	
 	
 		
