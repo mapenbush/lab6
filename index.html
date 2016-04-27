@@ -71,12 +71,35 @@
 	
 		L.control.layers(baseMaps).addTo(map);
 		
-		
-		  // load GeoJSON from an external file
-	  $.getJSON("PA_CO.geojson",function(data){
-	    // add GeoJSON layer to the map once the file is loaded
-	    L.geoJson(data).addTo(map);
-	  });
+
+
+$.getJSON("pa_county.geojson",function(data){
+  L.geoJson( pa_county, {
+    style: function(feature){
+      var fillColor,
+          hlthcst = feature.properties.FIPS;
+      if ( hlthcst > 12000 ) fillColor = "#006837";
+      else if ( hlthcst > 11000 ) fillColor = "#31a354";
+      else if ( hlthcst > 10000 ) fillColor = "#78c679";
+      else if ( hlthcst > 9000 ) fillColor = "#c2e699";
+      else if ( hlthcst > 8000 ) fillColor = "#ffffcc";
+      else fillColor = "#hlthcst";  // no data
+      return { color: "#999", weight: 1, fillColor: fillColor, fillOpacity: .6 };
+    },
+    onEachFeature: function( feature, layer ){
+      layer.bindPopup( "<strong>" + feature.properties.County_Nam + "</strong><br/>" + feature.properties.FIPS + " Health Care Cost" )
+    }
+  }).addTo(map);
+});
+
+
+
+L.geoJson(statesData, {style: style}).addTo(map);
+	
+	
+	
+	
+	
 		
 		</script>	
 	</h3>
