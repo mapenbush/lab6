@@ -329,6 +329,10 @@ var hospitals =  {
 { "type": "Feature", "properties": { "SURVEY_ID_": "4404", "LONGITUDE": -75.950106, "LATITUDE": 40.330929, "HOSPITAL_U": "www.readinghealth.org", "GEOCODING_": "00", "FACILITY_N": "READING HOSPITAL", "STREET": "PO BOX 16052, SIXTH AVE & SPRUCE ST", "CITY_TOWN": "READING", "ZIP_CODE": "19612", "ZIP_CODE_E": "6052", "CITY_BORO_": "West Reading", "COUNTY": "BERKS", "AREA_CODE": "484", "TELEPHONE_": "6288000", "CHIEF_EXEC": "Clint Matthews", "CHIEF_EX_1": "President & CEO" }, "geometry": { "type": "Point", "coordinates": [ -75.950106, 40.330929 ] } }
 ]
 };
+function onEachFeature(feature, layer) {
+		        layer.bindPopup("<h1>"+feature.properties.FACILITY_N+"</h1>");
+		}
+		
 
 var baseMaps =  {
     "Stamen": stamen,
