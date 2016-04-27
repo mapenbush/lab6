@@ -207,7 +207,11 @@ td {
 	background: #ccc;
  }
 
-
+-/* Wrapper */
+ -.wrapper {
+ -  width:960px;
+ -}
+ -
 
 /* Header */
 
