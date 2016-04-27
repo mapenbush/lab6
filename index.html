@@ -330,8 +330,16 @@ var hospitals =  {
 ]
 };
 
-L.geoJson(hospitals).addTo(map);
+var baseMaps =  {
+    "Stamen": stamen,
+    "Streets": streets
+};
 
+var hospital_geojson = L.geoJson(hospitals)
+var overlayMap = {
+	"Hospitals": hospital_geojson
+};
+L.control.layers(baseMaps, overlayMap).addTo(map);
 
 		
 		</script>	
