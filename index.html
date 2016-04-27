@@ -78,16 +78,16 @@ $.getJSON("pa_county.geojson",function(data){
     style: function(feature){
       var fillColor,
           hlthcst = feature.properties.FIPS;
-      if ( hlthcst > 12000 ) fillColor = "#980043";
-      else if ( hlthcst > 11000 ) fillColor = "#dd1c77";
-      else if ( hlthcst > 10000 ) fillColor = "#df65b0";
-      else if ( hlthcst > 9000 ) fillColor = "#d7b5d8";
-      else if ( hlthcst > 8000 ) fillColor = "#f1eef6";
+      if ( hlthcst > 12000 ) fillColor = "#7a0177";
+      else if ( hlthcst > 11000 ) fillColor = "#c51b8a";
+      else if ( hlthcst > 10000 ) fillColor = "#f768a1";
+      else if ( hlthcst > 9000 ) fillColor = "#fbb4b9";
+      else if ( hlthcst > 8000 ) fillColor = "#feebe2";
       else fillColor = "#hlthcst";  // no data
       return { color: "#999", weight: 1, fillColor: fillColor, fillOpacity: .6 };
     },
     onEachFeature: function( feature, layer ){
-      layer.bindPopup( "<strong>" + feature.properties.COUNTY_NAM + "</strong><br/>" +  " Health Care Cost" + feature.properties.FIPS)
+      layer.bindPopup( "<strong>" + feature.properties.COUNTY_NAM + "COUNTY" "</strong><br/>" +  " HEALTH CARE COST" + feature.properties.FIPS)
     }
   }).addTo(map);
 });
