@@ -79,7 +79,7 @@ $.getJSON("pacounties.geojson",function(data){
     style: function(feature){
       var fillColor,
           poor_health = feature.properties.Poor;
-      if ( poor_health > 18 ) fillColor = "#7a0177";
+      if ( poor_health > 15 ) fillColor = "#7a0177";
       else if ( poor_health > 13 ) fillColor = "#f768a1";
       else if ( poor_health > 9 ) fillColor = "#fcc5c0";
       else fillColor = "#000";  // no data
