@@ -53,14 +53,7 @@
 		    layers: [stamen]
 		});
 		
-		var hospital = {
-		    "Hospitals": hospitals,
-		    "Stamen": stamen
-		};
-		
-	
-		L.control.layers(hospital).addTo(map);
-		
+
 
 
 $.getJSON("pacounties.geojson",function(data){
@@ -81,13 +74,25 @@ $.getJSON("pacounties.geojson",function(data){
 });
 
 	
-var hospitals = $.getJSON("pa_hospitals.geojson",function(data2){
-  L.geoJson(data2,{
-    onEachFeature: function( feature, layer ){
-      layer.bindPopup( "<strong>" + feature.properties.FACILITY_N +  "</strong><br/>")
-    } 
-  })
+
+var geoLayer = $.getJSON("pa_hospitals.geojson",function(data2){
+  L.geoJson(data2)
 });
+
+
+map.on('click', function() {
+  if(map.hasLayer(geoLayer)) {
+    map.removeLayer(geoLayer);
+  } else {
+    map.addLayer(geoLayer);
+  }
+});
+
+var baseLayers = {
+  "Stamen": stamen,
+  "GeoJSON": geoLayer
+};
+L.control.layers(baseLayers).addTo(map);
 	
 	
 		
