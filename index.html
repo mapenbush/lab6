@@ -74,7 +74,7 @@
 
 
 $.getJSON("pa_county.geojson",function(data){
-  L.geoJson( pa_county, {
+  L.geoJson(data, {
     style: function(feature){
       var fillColor,
           hlthcst = feature.properties.FIPS;
@@ -92,10 +92,6 @@ $.getJSON("pa_county.geojson",function(data){
   }).addTo(map);
 });
 
-
-
-L.geoJson(statesData, {style: style}).addTo(map);
-	
 	
 	
 	
