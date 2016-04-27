@@ -39,7 +39,7 @@
         	<div id='map'</div>
 		<script>
 		<script type="text/javascript" src="PA_CO.geojson"></script>
-		<script type="text/javascript">
+
 	
 		L.mapbox.accessToken = 'pk.eyJ1IjoibXF1YWNrZW5idXNoIiwiYSI6ImNpaDVvNnZzMzAxbWh0eGx4NHJob2NzZHgifQ.xXD8TNhco44xCbisjTgQSw';
 		
@@ -57,7 +57,7 @@
 		;
 		
 		var map = L.map('map', {
-		    center: [40.726678, -77.543390],
+		    center: [41.726678, -78.543390],
 		    zoom: 8,
 		    layers: [stamen]
 		});
@@ -73,10 +73,10 @@
 		
 		
 		  // load GeoJSON from an external file
-  $.getJSON("PA_CO.geojson",function(data){
-    // add GeoJSON layer to the map once the file is loaded
-    L.geoJson(data).addTo(map);
-  });
+	  $.getJSON("PA_CO.geojson",function(data){
+	    // add GeoJSON layer to the map once the file is loaded
+	    L.geoJson(data).addTo(map);
+	  });
 		
 		</script>	
 	</h3>
