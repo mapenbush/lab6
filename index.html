@@ -56,7 +56,7 @@
 		;
 		
 		var map = L.map('map', {
-		    center: [35.331086, -83.368441],
+		    center: [40.726678, -77.543390],
 		    zoom: 6,
 		    layers: [streets]
 		});
@@ -70,7 +70,7 @@
 	
 		L.control.layers(baseMaps).addTo(map);
 		
-		var geojsonlayer = L.geoJson(PA_CO, {onEachFeature: onEachFeature}).addTo(map);
+		var geojsonlayer = L.geoJson(PA_CO.geoJson, {onEachFeature: onEachFeature}).addTo(map);
 		
 		</script>	
 	</h3>
