@@ -53,14 +53,13 @@
 		    layers: [stamen]
 		});
 		
-		var baseMaps = {
-		    "Streets": streets,
-		    "Topographic": topographic,
-		    "Stamen" : stamen
+		var hospital = {
+		    "Hospitals": hospitals
+		    "Stamen": stamen
 		};
 		
 	
-		L.control.layers(baseMaps).addTo(map);
+		L.control.layers(hospital).addTo(map);
 		
 
 
@@ -82,12 +81,12 @@ $.getJSON("pacounties.geojson",function(data){
 });
 
 	
-$.getJSON("pa_hospitals.geojson",function(data2){
+var hospitals = $.getJSON("pa_hospitals.geojson",function(data2){
   L.geoJson(data2,{
     onEachFeature: function( feature, layer ){
       layer.bindPopup( "<strong>" + feature.properties.FACILITY_N +  "</strong><br/>")
     } 
-  }).addTo(map);
+  })
 });
 	
 	
