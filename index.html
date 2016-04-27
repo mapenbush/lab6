@@ -16,7 +16,7 @@
     <script src='https://api.mapbox.com/mapbox.js/v2.3.0/mapbox.js'></script>
     <link href='https://api.mapbox.com/mapbox.js/v2.3.0/mapbox.css' rel='stylesheet' />
     <script src="jquery-2.1.1.min.js"></script>
-    <style>#map { height: 1200px; width: 1800px;}</style>
+    <style>#map { height: 1000px; width: 1400px;}</style>
     <h1 class="header"><center><font face="verdana"; font size="18">Mapping County Health Care Costs</font></center></h1>
 
     <!--[if lt IE 9]>
@@ -62,7 +62,7 @@ $.getJSON("pacounties.geojson",function(data){
       else if ( poor_health > 13 ) fillColor = "#f768a1";
       else if ( poor_health > 9 ) fillColor = "#fcc5c0";
       else fillColor = "#000";  // no data
-      return { color: "#000", weight: 1, fillColor: fillColor, fillOpacity: .6 };
+      return { color: "#8B1B33", weight: 1, fillColor: fillColor, fillOpacity: .6 };
     },
     onEachFeature: function( feature, layer ){
       layer.bindPopup( "<strong>" + feature.properties.COUNTY_NAM + " COUNTY" + "</strong><br/>" + "PERCENTER POPULATION IN POOR HEALTH:" + feature.properties.Poor)
