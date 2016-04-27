@@ -62,7 +62,7 @@ $.getJSON("pacounties.geojson",function(data){
       else if ( poor_health > 13 ) fillColor = "#f768a1";
       else if ( poor_health > 9 ) fillColor = "#fcc5c0";
       else fillColor = "#000";  // no data
-      return { color: "#000", weight: 1.5, fillColor: fillColor, fillOpacity: .9 };
+      return { color: "#8B1B33", weight: 1.5, fillColor: fillColor, fillOpacity: .9 };
     },
     onEachFeature: function( feature, layer ){
       layer.bindPopup( "<strong>" + feature.properties.COUNTY_NAM + " COUNTY" + "</strong><br/>" + "PERCENTER POPULATION IN POOR HEALTH:" + feature.properties.Poor)
