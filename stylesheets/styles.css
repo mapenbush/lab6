@@ -208,10 +208,11 @@ td {
  }
 
 -/* Wrapper */
- -.wrapper {
- -  width:960px;
- -}
- -
+.wrapper {
+  width:960px;
+	
+}
+ 
 
 /* Header */
 
