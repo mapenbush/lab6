@@ -30,7 +30,7 @@ body {
   font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-size: 14px;
 	color: #232323;
-	background-color: #006666;
+	background-color: #EB6618;
 	margin: 0;
 	line-height: 1.8em;
 	-webkit-font-smoothing: antialiased;
@@ -324,6 +324,7 @@ section {
   width:650px;
   float:left;
   padding-bottom:50px;
+  padding-left:50px;
 }
 
 
