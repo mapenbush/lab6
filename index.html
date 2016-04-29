@@ -65,7 +65,7 @@ $.getJSON("pacounties.geojson",function(data){
       return { color: "#8B1B33", weight: 1.5, fillColor: fillColor, fillOpacity: .9 };
     },
     onEachFeature: function( feature, layer ){
-      layer.bindPopup( "<strong>" + feature.properties.COUNTY_NAM + " COUNTY" + "</strong><br/>" + "PERCENTER POPULATION IN POOR HEALTH:" + feature.properties.Poor)
+      layer.bindPopup( "<strong>" + feature.properties.COUNTY_NAM + " COUNTY" + "</strong><br/>" + "PERCENT POPULATION IN POOR HEALTH:" + feature.properties.Poor)
     } 
   }).addTo(map);
 });
